@@ -1,0 +1,150 @@
+/* BIG Website */
+
+html {
+    background-color:#ccc;  
+}
+
+main {
+    background-color:#fff;
+    width:80%;
+    margin:auto;
+    overflow:auto;
+} 
+
+h1, h2, p {
+    padding:0 16px; /* Top Right Bottom Left */
+}
+
+h1 a {
+    text-decoration: none;
+}
+
+.logo {
+    margin-right: 0.5em;
+}
+
+img {
+    width:100%;
+    border:1px solid #000; /* width style color */
+}
+
+div.gallery {
+    text-align:center;
+    
+}
+figure {
+    display:inline-block;
+    margin:.25%;
+}
+
+/* START - EMBED RESPONSIVELY STYLES */
+.embed-container {
+    position: relative; 
+    padding-bottom: 56.25%; 
+    height: 0; 
+    overflow: hidden; 
+    max-width: 100%;
+} 
+
+.embed-container iframe { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+}
+/* END - EMBED RESPONSIVELY STYLES */
+
+
+/* HIDE AGENDA VIEW CALENDAR */
+div.embed-container.agenda-view {
+    display:none;
+}
+
+footer {
+    padding:2% 2% 2% 2%; /* Top Right Bottom Left */
+    text-align:center;
+    clear:both;
+}
+
+.embed-container { 
+    position: relative; 
+    padding-bottom: 56.25%; 
+    height: 0; 
+    overflow: hidden; 
+    max-width: 100%; 
+} 
+
+.embed-container iframe, {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+}
+
+/* DESKTOP STYLES */
+@media all and (min-width: 1400px) {
+    
+    section {
+        width:65%;
+        float:left;
+    }
+    
+    aside {
+        width:30%;
+        float:right;
+    }
+    
+    img.tablet, img.phone {
+        display:none;
+    }
+}
+
+/* TABLET STYLES */
+@media all and (min-width):601px) and (max-width:1399px) {
+    
+    div.wrapper {
+        width:90%;
+    }
+    
+    section {
+        width:55%;
+        float:left;
+    }
+    
+    aside {
+        width:40%;
+        float:right;
+    }
+    img.tablet, img.phone {
+        display:none;
+    }
+}
+
+/* CALENDER RULES for PHONE */
+@media all and (max-width:860px) {
+    
+    /* Show Agenda View Calendar */
+    div.embed-container.agenda-view {
+        display:block;
+    }
+    
+    /** Hide Month View Calendar */
+    div.embed-container.month-view {
+        display:none;
+    }
+}
+
+/* PHONE STYLES */
+
+@media all and (max-width:600px) {
+    
+    div.wrapper {
+        width:100%;
+    }
+    
+    img.tablet, img.phone {
+        display:none;
+    }
+}
